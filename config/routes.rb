@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
 
+  get "edit_password", to: "password#edit"
+  patch "edit_password", to: "password#update"
+
   root to: "main#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
