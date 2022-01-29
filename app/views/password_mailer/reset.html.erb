@@ -4,4 +4,4 @@ Someone requested a rest of your password.
 
 If this was you, click the link to reset your password. The link will expire automartically in 15 minutes
 
-<%= link_to "Reset Password", password_reset_edit_url(token: @token) %>
+<%= link_to "Reset Password", password_reset_edit_url(token: params[:user].reset_password_token) %>

@@ -1,5 +1,8 @@
 class RegistrationsController < ApplicationController
-    def new
+    def new  
+        if @user_current
+            redirect_to root_path
+        end
         @user = User.new
     end
 
